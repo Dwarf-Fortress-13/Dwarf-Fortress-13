@@ -48,7 +48,7 @@
 		user.visible_message(span_notice("<b>[user]</b> hits \the anvil with \a hammer.") , \
 						span_notice("You hit \the anvil with \a hammer."))
 		current_ingot.progress_current++
-		H.adjustStaminaLoss(rand(1, 5))
+		H.adjustStaminaLoss(rand(1, 1)) //Causes 1-5 stamina damage by default. Reduced so smiths rage less - Art
 		H.mind.adjust_experience(/datum/skill/smithing, rand(0, 4) * current_ingot.grade)
 
 /obj/structure/anvil/proc/miss(mob/user)
